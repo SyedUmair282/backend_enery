@@ -10,9 +10,9 @@ app.use(cors())
 
 //env
 dotenv.config();
-
+const MONGO_URI="mongodb+srv://dbUmair:umairsyed9453@cluster0.qihnkdc.mongodb.net/energy_consumer_db?retryWrites=true&w=majority"
 //mongodb connetcion
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log("Connection successful");
 }).catch((err) => {
     console.log("Connection not successfull", err);
